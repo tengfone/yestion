@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import { ConvexClientProvider } from '@/components/convex-provider'
+import { ModalProvider } from '@/components/modal-providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,6 +44,7 @@ export default function RootLayout({
             storageKey='yestion-theme'
           >
             <Toaster position='bottom-center' />
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </ConvexClientProvider>

@@ -25,3 +25,4 @@ DIV_B=className="opacity-0 group-hover/sidebar:opacity-100"
 
 - Sidebar using mediaquery for resizing
 - event.stopPropagation prevents "layed" functions e.g 2 divs inner and outer, u click inner, but outer also triggers.
+- Overlaying event listener with custom state management (zustand)
