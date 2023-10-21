@@ -1,5 +1,6 @@
 "use client"
 
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { api } from '@/convex/_generated/api';
 import { Id } from '@/convex/_generated/dataModel';
@@ -8,6 +9,11 @@ import { useRouter } from 'next/navigation';
 import React from 'react'
 import { toast } from 'sonner';
 import { ConfirmModal } from '@/components/modals/confirm-modal';
+=======
+import { Id } from '@/convex/_generated/dataModel';
+import { useRouter } from 'next/navigation';
+import React from 'react'
+>>>>>>> 32e7801282c5211aa60e63e21a022ee1ff7b2275
 
 interface BannerProps {
     documentId: Id<"documents">;
@@ -18,6 +24,7 @@ export const Banner = ({
 }: BannerProps) => {
 
     const router = useRouter()
+<<<<<<< HEAD
     const remove = useMutation(api.documents.remove)
     const restore = useMutation(api.documents.restore)
 
@@ -51,6 +58,12 @@ export const Banner = ({
                     Permanently Delete
                 </Button>
             </ConfirmModal>
+=======
+
+    return (
+        <div>
+            hel
+>>>>>>> 32e7801282c5211aa60e63e21a022ee1ff7b2275
         </div>
     )
 }

@@ -6,8 +6,12 @@ import { useQuery } from "convex/react";
 import { MenuIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import { Title } from "./title";
+<<<<<<< HEAD
 import { Banner } from "./banner";
 import { Menu } from "./menu";
+=======
+import Banner from "./banner";
+>>>>>>> 32e7801282c5211aa60e63e21a022ee1ff7b2275
 
 interface NavbarProps {
     isCollapsed: boolean;
@@ -55,7 +59,11 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
                 </div>
             </nav>
             {document.isArchived && (
+<<<<<<< HEAD
                 <Banner documentId={document._id} />
+=======
+                <Banner documentId={document._id}/>
+>>>>>>> 32e7801282c5211aa60e63e21a022ee1ff7b2275
             )}
         </>
     )
