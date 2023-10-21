@@ -24,7 +24,6 @@ export const Banner = ({
 }: BannerProps) => {
 
     const router = useRouter()
-<<<<<<< HEAD
     const remove = useMutation(api.documents.remove)
     const restore = useMutation(api.documents.restore)
 
@@ -58,12 +57,6 @@ export const Banner = ({
                     Permanently Delete
                 </Button>
             </ConfirmModal>
-=======
-
-    return (
-        <div>
-            hel
->>>>>>> 32e7801282c5211aa60e63e21a022ee1ff7b2275
         </div>
     )
 }
