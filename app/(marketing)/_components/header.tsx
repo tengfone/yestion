@@ -11,8 +11,11 @@ export const Header = () => {
     const { isAuthenticated, isLoading } = useConvexAuth()
     return (
         <div className="max-w-3xl space-y-4">
+            <p className="text-sm font-thin">
+                A Notion clone for educational purposes.
+            </p>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
-                A Notion clone for my education of being a SWE.Welcome to <span className="underline">Yestion</span>
+                Welcome to <span className="underline">Yestion</span>
             </h1>
             <h3 className="text-base sm:text-xl md:text-2xl font-medium">
                 Yestion is the best note taking application where <br />
