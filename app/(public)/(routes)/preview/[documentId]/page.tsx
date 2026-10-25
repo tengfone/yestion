@@ -2,6 +2,7 @@
 
 import { Cover } from '@/components/cover'
 import dynamic from "next/dynamic"
+import { useParams } from "next/navigation"
 import { useMemo } from 'react'
 import { Toolbar } from '@/components/toolbar'
 import { Skeleton } from '@/components/ui/skeleton'
@@ -10,15 +11,9 @@ import { Id } from '@/convex/_generated/dataModel'
 import { useMutation, useQuery } from 'convex/react'
 import React from 'react'
 
-interface DocumentIdPageProps { // alternative is to use useParams()
-    params: {
-        documentId: Id<"documents">
-    }
-}
-
-const DocumentIdPage = ({
-    params
-}: DocumentIdPageProps) => {
+// Next.js 15 passes `params` to pages as a Promise; read them with useParams() in this client component.
+const DocumentIdPage = () => {
+    const params = useParams<{ documentId: Id<"documents"> }>()
 
     const Editor = useMemo(() => dynamic(() => import("@/components/editor"), { ssr: false }), [])
 
